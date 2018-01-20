@@ -8,7 +8,7 @@ class BucketListMoviesController < ApplicationController
   def create
     @bucket_list = BucketList.find_by(:id => params[:bucket_list_movie][:bucket_list_id])
     if current_user
-      @bucket_list.movie << Movie.find(params[:movie_id])
+      @bucket_list.movies << Movie.find(params[:movie_id])
       @bucket_list.save
       redirect_to user_bucket_lists_path(current_user)
     else
