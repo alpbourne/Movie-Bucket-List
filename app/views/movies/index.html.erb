@@ -6,6 +6,7 @@
 <% @movies.each do |movie| %>
   <p><%=movie.name%> | <%=movie.genre%> | <%=movie.rating%>
   <%=form_tag(new_bucket_list_movie_path(movie_id: movie.id), method: "get") do %>
+  <%= hidden_field_tag 'movie_id', movie.id %>
   <%= submit_tag('Add to Bucket List')%>
   <% end %> </p>
 <% end %>
