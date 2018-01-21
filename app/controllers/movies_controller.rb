@@ -20,7 +20,7 @@ class MoviesController < ApplicationController
        redirect_to movies_path
      else
        flash[:alert] = "Please make sure all fields are filled out correctly"
-       redirect_to new_movie_path
+       redirect_to new_movie_path(movie.id)
      end
    end
 
@@ -32,6 +32,20 @@ class MoviesController < ApplicationController
   def highest_rating
     @movies = Movie.all
     @highest_rated = @movies.where("rating > 8.5")
+  end
+
+  def edit
+    @movie = Movie.find(params[:id])
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+    @movie.update_attributes(movie_params)
+    if @movie.update_attributes(movie_params)
+      redirect_to movies_path
+    else
+      flash[:alert] = "Please make sure all fields are filled out correctly"
+      redirect_to edit_movie_path()
   end
 
   private
