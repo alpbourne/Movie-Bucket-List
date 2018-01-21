@@ -11,7 +11,9 @@ class BucketList < ApplicationRecord
 
   def bucket_list_movies_attributes=(bucket_list_movies_attributes)
     bucket_list_movies_attributes.each do |index, attribute|
+      if BucketListMovie.find_by(id: attribute["id"])
         BucketListMovie.update(attribute["id"], :seen => attribute["seen"])
+      end
     end
   end
 end
