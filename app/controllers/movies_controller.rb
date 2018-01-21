@@ -45,7 +45,8 @@ class MoviesController < ApplicationController
       redirect_to movies_path
     else
       flash[:alert] = "Please make sure all fields are filled out correctly"
-      redirect_to edit_movie_path()
+      redirect_to edit_movie_path(movie.id)
+    end
   end
 
   private
