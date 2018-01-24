@@ -126,3 +126,5 @@
           redirect_to new_bucket_list_movie_path(movie_id: movie.id)
         end
       end
+      <!-- <h4> Have you seen this movie? </h4>
+      <%= f.check_box :seen? %><br> -->

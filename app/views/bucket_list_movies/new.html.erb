@@ -3,8 +3,6 @@
 <%= form_for @bucket_list_movie do |f| %>
   <h4> Which Bucket List would you like to add this to?</h4>
   <%= f.collection_select :bucket_list_id, BucketList.all, :id, :name, include_blank: "" %><br>
-  <h4> Have you seen this movie? </h4>
-  <%= f.check_box :seen? %><br>
   <%= hidden_field_tag :movie_id, @movie_id %>
   <%= f.submit "Add Movie to Bucket List" %>
 <% end %>
