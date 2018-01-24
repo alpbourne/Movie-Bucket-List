@@ -2,11 +2,18 @@
 
 Specs:
 - [x] Using Ruby on Rails for the project
-- [ ] Include at least one has_many relationship (x has_many y e.g. User has_many Recipes)
-- [ ] Include at least one belongs_to relationship (x belongs_to y e.g. Post belongs_to User)
-- [ ] Include at least one has_many through relationship (x has_many y through z e.g. Recipe has_many Items through Ingredients)
-- [ ] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity)
-- [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
+- [x] Include at least one has_many relationship (x has_many y e.g. User has_many Recipes)
+      Users has_many bucket_lists, BucketList has_many bucket_list_movies, Movies has_many bucket_list_movies
+- [x] Include at least one belongs_to relationship (x belongs_to y e.g. Post belongs_to User)
+      BucketList belongs to User, BucketListMovie belongs to BucketList and Movie
+- [x] Include at least one has_many through relationship (x has_many y through z e.g. Recipe has_many Items through Ingredients)
+      BucketList has_many Movies through bucket_list_movies, Movie has_many BucketLists through bucket_list_movies,
+- [x] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity)
+      bucket_list_movie.seen - users can mark BucketListMovies as seen
+- [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
+    Movie: validates name presence and uniqueness as true, genre and rating presence as true
+    BucketList: validates name presence and uniqueness as true
+    User: validates email uniqueness as true
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
 - [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
 - [ ] Include signup (how e.g. Devise)
