@@ -16,4 +16,10 @@ class BucketListMoviesController < ApplicationController
       redirect_to new_bucket_list_movie_path(movie_id: movie.id)
     end
   end
+
+  private
+
+  def bucket_list_movie_params
+    params.require(:bucket_list_movie).permit(:bucket_list_id, :movie_id, :seen)
+  end
 end
