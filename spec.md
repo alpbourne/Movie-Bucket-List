@@ -12,10 +12,10 @@ Specs:
       bucket_list_movie.seen - users can mark BucketListMovies as seen
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
     Movie: validates name presence and uniqueness as true, genre and rating presence as true
-    BucketList: validates name presence and uniqueness as true
+    BucketList: validates name presence and uniqueness as true *scope to user*
     User: validates email uniqueness as true
 - [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-    /movies/highest_rating - view the movies with ratings over 8.5
+    /movies/highest_rating - view the movies with ratings over 8.5 *add to bucket list most often, movies that they've seen(/movies?seen=true query parameter)*
 - [x] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
     bucket_list_movies_attributes - custom attribute writer is in BucketList model and is used in the edit BucketList form at /users/2/bucket_lists/7/edit
 - [x] Include signup (how e.g. Devise)
@@ -35,8 +35,11 @@ Specs:
     /movies/:id/edit - "Please make sure all fields are filled out correctly"
     /bucket_list_movies/new - "Please make sure all fields are filled out correctly"
     /users/:user_id/bucket_lists/new - "Please make sure all fields are filled out correctly"
+    *render or field_with_errors*
 Confirm:
 - [x] The application is pretty DRY
 - [x] Limited logic in controllers
 - [x] Views use helper methods if appropriate
 - [x] Views use partials if appropriate
+
+!-- helper method for if statement and partial for fields_for section in bucketlists edit --!
