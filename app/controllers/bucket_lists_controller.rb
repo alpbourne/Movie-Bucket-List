@@ -22,6 +22,7 @@ class BucketListsController < ApplicationController
        redirect_to user_bucket_lists_path(current_user)
      else
        flash[:alert] = "Please make sure all fields are filled out correctly"
+       binding.pry
        redirect_to new_user_bucket_list_path
      end
    end
