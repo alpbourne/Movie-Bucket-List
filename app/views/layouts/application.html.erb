@@ -12,6 +12,7 @@
      <%= link_to("Sign Out", destroy_user_session_path, :method => 'delete') %>
      <%= link_to "Your Bucket Lists", user_bucket_lists_path(current_user.id) %>
      <%= link_to "Create New Bucket List", new_user_bucket_list_path(current_user.id) %>
+     <%= link_to "All Movies", movies_path %>
      <%= link_to "Highest Rated Movies", highest_rating_path %>
      <%= link_to "Create New Movie", new_movie_path %>
      <p>
