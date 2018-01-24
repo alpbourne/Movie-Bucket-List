@@ -1,6 +1,4 @@
 <br>
-<h3> <%= link_to "Your Bucket Lists", user_bucket_lists_path(current_user.id) %> <%= link_to "Create New Bucket List", new_user_bucket_list_path(current_user.id) %> <%= link_to "Highest Rated Movies", highest_rating_path %> <%= link_to "Create New Movie", new_movie_path %> </h3>
-
 <h2>Bucket List Movies</h2>
 
 <% @movies.each do |movie| %>
