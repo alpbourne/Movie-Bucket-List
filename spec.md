@@ -14,16 +14,27 @@ Specs:
     Movie: validates name presence and uniqueness as true, genre and rating presence as true
     BucketList: validates name presence and uniqueness as true
     User: validates email uniqueness as true
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-- [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
-- [ ] Include signup (how e.g. Devise)
-- [ ] Include login (how e.g. Devise)
-- [ ] Include logout (how e.g. Devise)
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes)
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
-
+- [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+    /movies/highest_rating - view the movies with ratings over 8.5
+- [x] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
+    bucket_list_movies_attributes - custom attribute writer is in BucketList model and is used in the edit BucketList form at /users/2/bucket_lists/7/edit
+- [x] Include signup (how e.g. Devise)
+    Devise
+- [x] Include login (how e.g. Devise)
+    Devise
+- [x] Include logout (how e.g. Devise)
+    Devise
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth)
+    Devise/OmniAuth for Facebook
+- [x] Include nested resource show or index (URL e.g. users/2/recipes)
+    /users/2/bucket_lists
+- [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
+    /users/:user_id/bucket_lists/new
+- [x] Include form display of validation errors (form URL e.g. /recipes/new)
+    /movies/new - "Please Log In First"+"Please make sure all fields are filled out correctly"
+    /movies/:id/edit - "Please make sure all fields are filled out correctly"
+    /bucket_list_movies/new - "Please make sure all fields are filled out correctly"
+    /users/:user_id/bucket_lists/new - "Please make sure all fields are filled out correctly"
 Confirm:
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
