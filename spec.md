@@ -36,7 +36,7 @@ Specs:
     /bucket_list_movies/new - "Please make sure all fields are filled out correctly"
     /users/:user_id/bucket_lists/new - "Please make sure all fields are filled out correctly"
 Confirm:
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [x] The application is pretty DRY
+- [x] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate
