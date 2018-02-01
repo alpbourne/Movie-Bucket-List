@@ -3,14 +3,14 @@
 
 
 <div class="card" style="width: 18rem;">
-  <% @movies.each do |movie| %>
   <div class="card-body">
+    <% @movies.each do |movie| %>
     <h5 class="card-title"><%=movie.name%></h5>
       <p class="card-text"><%=movie.genre%> | <%=movie.rating%> | <%= link_to "Edit", edit_movie_path(:id => movie.id)%></p>
       <%=form_tag(new_bucket_list_movie_path(movie_id: movie.id), method: "get") do %>
       <%= hidden_field_tag 'movie_id', movie.id %>
       <%= submit_tag "+Add to Bucket List", class:"btn btn-primary" %>
-      <% end %><br>
+      <% end %>
     <% end %>
   </div>
 </div>
