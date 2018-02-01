@@ -9,16 +9,16 @@
 }
 
 .btn {
-  height: 42px;
-  width: 90px;
+  height: 35px;
+  width: 150px;
   border-radius: 6px;
   border-color: #60D3B9;
   background-color: #60D3B9;
 }
 
 .btn:hover{
-  height: 42px;
-  width: 90px;
+  height: 35px;
+  width: 150px;
   border-radius: 6px;
   border-color: #4BB59D;
   background-color: #4BB59D;
