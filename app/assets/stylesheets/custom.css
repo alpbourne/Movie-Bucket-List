@@ -31,9 +31,9 @@ h2 {
 .card-body {
   height: 115px;
   width: 400px;
-  border: 1px solid #979797;
+  /* border: 1px solid #979797; */
   border-radius: 8px;
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
   margin-left: 10px;
 }
 
