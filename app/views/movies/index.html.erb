@@ -1,10 +1,24 @@
 <br>
 <h2>Bucket List Movies</h2>
 
-<% @movies.each do |movie| %>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <% @movies.each do |movie| %>
+    <h5 class="card-title"><%=movie.name%></h5>
+      <p class="card-text"><%=movie.genre%> | <%=movie.rating%> | <%= link_to "Edit", edit_movie_path(:id => movie.id)%>
+      <%=form_tag(new_bucket_list_movie_path(movie_id: movie.id), method: "get") do %>
+      <%= hidden_field_tag 'movie_id', movie.id %>
+      <%= submit_tag "Add to Bucket List", class:"btn btn-primary" %>
+      <% end %></p>
+    <% end %>
+  </div>
+</div>
+
+<!-- <% @movies.each do |movie| %>
   <p><%=movie.name%> | <%=movie.genre%> | <%=movie.rating%> | <%= link_to "Edit", edit_movie_path(:id => movie.id)%>
   <%=form_tag(new_bucket_list_movie_path(movie_id: movie.id), method: "get") do %>
   <%= hidden_field_tag 'movie_id', movie.id %>
   <%= submit_tag('Add to Bucket List')%>
   <% end %> </p>
-<% end %>
+<% end %> -->
