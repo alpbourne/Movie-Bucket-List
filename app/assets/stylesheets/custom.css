@@ -16,10 +16,19 @@
   background-color: #60D3B9;
 }
 
-.btn:hover{
+.btn:hover {
   height: 35px;
   width: 150px;
   border-radius: 6px;
   border-color: #4BB59D;
   background-color: #4BB59D;
+}
+
+.card-body {
+  height: 115px;
+  width: 400px;
+  border: 1px
+  solid #979797;
+  border-radius: 8px;
+  background-color: #FAFAFA;
 }
