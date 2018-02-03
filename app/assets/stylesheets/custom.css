@@ -2,6 +2,17 @@ h2 {
   margin-left: 10px;
 }
 
+.header {
+  height: 42px;
+  width: 100%;
+  background-color: #3B3E3F;
+  color: #FFFFFF
+}
+
+a.header:link { 
+  color: #FFFFFF;
+}
+
 .card-title {
   	height: 24px;
     width: 500px;
