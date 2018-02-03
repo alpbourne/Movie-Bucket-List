@@ -3,7 +3,7 @@ class BucketList < ApplicationRecord
   has_many :bucket_list_movies
   has_many :movies, through: :bucket_list_movies
   validates :name, presence: true
-  validates :name, uniqueness: true
+  validates_uniqueness_of :name, scope: :user_id
   accepts_nested_attributes_for :movies, reject_if: proc { |attributes| attributes.all? {|k, v| v.blank? }}
 
   # def movies_attributes=(movies_attributes)
