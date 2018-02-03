@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header-links">
   <% if current_user %>
    <%= link_to("Sign Out", destroy_user_session_path, :method => 'delete') %>
    <%= link_to "Your Bucket Lists", user_bucket_lists_path(current_user.id) %>

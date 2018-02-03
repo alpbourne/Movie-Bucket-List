@@ -2,14 +2,14 @@ h2 {
   margin-left: 10px;
 }
 
-.header {
+.header-links {
   height: 42px;
   width: 100%;
   background-color: #3B3E3F;
   color: #FFFFFF
 }
 
-a.header:link { 
+.header-links a:link{
   color: #FFFFFF;
 }
 
