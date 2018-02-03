@@ -1,18 +1,20 @@
 <h2>New Bucket List Form</h2>
 
-<%= form_for ([current_user, @bucket_list])do |f| %>
-  <%= render 'bucket_lists/form', f: f %>
-  <br>
+<div class="form">
+  <%= form_for ([current_user, @bucket_list])do |f| %>
+    <%= render 'bucket_lists/form', f: f %>
+    <br>
 
-  <h4> Create New Movie to Add:</h4>
-  <%= f.fields_for(:movies) do |m| %>
-    <%= m.label :name %>
-    <%= m.text_field :name %><br>
-    <%= m.label :genre %>
-    <%= m.text_field :genre %><br>
-    <%= m.label :rating %>
-    <%= m.number_field :rating %><br>
-  <% end %>
+    <h4> Create New Movie to Add:</h4>
+    <%= f.fields_for(:movies) do |m| %>
+      <%= m.label :name %>
+      <%= m.text_field :name %><br>
+      <%= m.label :genre %>
+      <%= m.text_field :genre %><br>
+      <%= m.label :rating %>
+      <%= m.number_field :rating %><br>
+    <% end %>
 
-  <%= f.submit "Create",  class:"btn btn-primary" %>
-  <% end %>
+    <%= f.submit "Create",  class:"btn btn-primary" %>
+    <% end %>
+</div>
