@@ -1,4 +1,4 @@
-<h2> Edit Bucketlist </h2>
+<h2> Edit Bucket List </h2>
 
 <div class="form">
   <%= form_for ([current_user, @bucket_list])do |f| %>
@@ -23,6 +23,6 @@
     <% end %>
   </div>
     <br/>
-    <%= f.submit 'Update Bucket List' %>
+    <%= f.submit 'Update Bucket List', class:"btn btn-primary" %>
   <% end %>
 </div>
