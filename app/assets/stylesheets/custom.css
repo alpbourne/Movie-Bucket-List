@@ -65,6 +65,10 @@ h4 {
   margin-left: 10px;
 }
 
+.form-font {
+  font-weight: bold;
+}
+
 .field_with_errors {
   color: #f23C3C;
 }

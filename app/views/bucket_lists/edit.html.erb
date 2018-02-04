@@ -5,7 +5,8 @@
     <%= render 'bucket_lists/form', f: f %>
     <br>
 
-  <h4> Check off The Movies You Have Watched </h4>
+  <h4> Check Off The Movies You Have Watched </h4>
+    <div class="form-font">
     <% @bucket_list.inspect %>
     <% if @bucket_list.bucket_list_movies.present? %>
       <%= f.fields_for :bucket_list_movies do |b| %>
@@ -20,6 +21,7 @@
     <% else %>
       No Movies in this Bucket List yet
     <% end %>
+  </div>
     <br/>
     <%= f.submit 'Update Bucket List' %>
   <% end %>
