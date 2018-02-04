@@ -1,23 +1,26 @@
 <h2> Edit Bucketlist </h2>
 
-<%= form_for ([current_user, @bucket_list])do |f| %>
-  <%= render 'bucket_lists/form', f: f %>
-  <br>
+<div class="form">
+  <%= form_for ([current_user, @bucket_list])do |f| %>
+    <%= render 'bucket_lists/form', f: f %>
+    <br>
 
-  <% @bucket_list.inspect %>
-  <br />
-  <% if @bucket_list.bucket_list_movies.present? %>
-    <%= f.fields_for :bucket_list_movies do |b| %>
-      <% movie= b.object.movie %>
-      <%= movie.name %>
-      | Seen?
-      <%= b.check_box :seen %>
-      <%= b.hidden_field :movie_id %>
-      <%= b.hidden_field :id %>
-      <br/>
+  <h4> Check off The Movies You Have Watched </h4>
+    <% @bucket_list.inspect %>
+    <% if @bucket_list.bucket_list_movies.present? %>
+      <%= f.fields_for :bucket_list_movies do |b| %>
+        <% movie= b.object.movie %>
+        <%= movie.name %>
+        | Seen?
+        <%= b.check_box :seen %>
+        <%= b.hidden_field :movie_id %>
+        <%= b.hidden_field :id %>
+        <br/>
+      <% end %>
+    <% else %>
+      No Movies in this Bucket List yet
     <% end %>
-  <% else %>
-    No Movies in this Bucket List yet
+    <br/>
+    <%= f.submit 'Update Bucket List' %>
   <% end %>
-  <%= f.submit 'Update Bucket List' %>
-<% end %>
+</div>
