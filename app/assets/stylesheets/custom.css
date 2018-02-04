@@ -72,3 +72,9 @@ h4 {
 .field_with_errors {
   color: #f23C3C;
 }
+
+.bucket-list-form-font {
+  color: #7c7c7c;
+  font-weight: bold;
+  font-size: 25px;
+}

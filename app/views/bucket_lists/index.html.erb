@@ -1,8 +1,12 @@
-<h1>Your Bucket Lists</h1>
+<h2>Your Bucket Lists</h2>
 
+<div class="form">
 <% @bucket_lists.each do |f| %>
+  <div class="bucket-list-form-font">
   <%= f.name %>
+  </div>
   <%= link_to 'View', user_bucket_list_path(current_user, f.id) %>
   <%= link_to "Delete", user_bucket_list_path(current_user, f.id), :method => :delete %>
-  <br>
+  <br><br>
 <% end %>
+</div>
