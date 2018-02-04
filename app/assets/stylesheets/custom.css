@@ -1,5 +1,6 @@
 h2 {
   margin-left: 10px;
+  color: #39C69E;
 }
 
 .header-links {
@@ -58,4 +59,8 @@ h2 {
 
 .form {
   margin-left: 10px;
+}
+
+.field_with_errors {
+  color: #f23C3C;
 }

@@ -34,10 +34,12 @@
 
   <body>
 
+    <div class="field_with_errors">
       <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
       <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
       <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
-
+    </div>
+      
     <%= yield %>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
