@@ -24,10 +24,10 @@ class MoviesController < ApplicationController
      end
    end
 
-  def show
-    @movies = Movie.all
-    @highest_rated = @movies.where("rating > 8.5")
-  end
+  # def show
+  #   @movies = Movie.all
+  #   @highest_rated = @movies.where("rating > 8.5")
+  # end
 
   def highest_rating
     @movies = Movie.all
