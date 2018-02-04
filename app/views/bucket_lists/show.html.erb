@@ -1,9 +1,11 @@
-<h3><%= @bucket_list.name %></h3>
+<h2><%= @bucket_list.name %></h2>
 
+<div class="form">
 <% @bucket_list.movies.each do |f| %>
+  <div class="bucket-list-form-font-two">
   <%= f.name %>
-  <br>
-  <br>
+  </div>
 <% end %>
 <br>
 <%= link_to "Edit", edit_user_bucket_list_path(current_user, :id => @bucket_list.id) %>
+</div>
