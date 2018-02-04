@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   resources :movies
   resources :bucket_list_movies
 
-  get '/movies/highest_rating' => 'movies#highest_rating', as: :highest_rating
+  get '/movies/highest_rating', to: 'movies#highest_rating'
 end

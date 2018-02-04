@@ -128,3 +128,20 @@
       end
       <!-- <h4> Have you seen this movie? </h4>
       <%= f.check_box :seen? %><br> -->
+
+
+      <!-- <% if current_user %>
+       <%= link_to("Sign Out", destroy_user_session_path, :method => 'delete') %>
+       <%= link_to "Your Bucket Lists", user_bucket_lists_path(current_user.id) %>
+       <%= link_to "Create New Bucket List", new_user_bucket_list_path(current_user.id) %>
+       <%= link_to "All Movies", movies_path %>
+       <%= link_to "Highest Rated Movies", highest_rating_path %>
+       <%= link_to "Create New Movie", new_movie_path %>
+       <p>
+         Signed in as <%= "#{current_user.email}" %>
+       </p>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path  %>
+        <%= link_to "sign in",  new_user_session_path  %>
+        <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+      <% end %> -->
