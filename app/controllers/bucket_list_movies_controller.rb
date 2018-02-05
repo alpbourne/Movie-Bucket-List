@@ -16,9 +16,10 @@ class BucketListMoviesController < ApplicationController
       redirect_to new_bucket_list_movie_path(movie_id: movie.id)
     end
 
-    def seen
+    def show
       @movies = BucketListMovie.all
-      @seen_movies = @movies.select{|m| m.seen == true}
+      @seen = @movies.where("seen = true")
+      # {|m| m.seen == true}
     end
 
   end
