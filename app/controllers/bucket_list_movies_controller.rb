@@ -15,6 +15,12 @@ class BucketListMoviesController < ApplicationController
       flash[:alert] = "Please make sure all fields are filled out correctly"
       redirect_to new_bucket_list_movie_path(movie_id: movie.id)
     end
+
+    def seen
+      @movies = BucketListMovies.all
+      @seen_movies = @movies.select{|m| m.seen == true}
+    end
+
   end
 
 end
