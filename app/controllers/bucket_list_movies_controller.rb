@@ -17,7 +17,7 @@ class BucketListMoviesController < ApplicationController
     end
 
     def seen
-      @movies = BucketListMovies.all
+      @movies = BucketListMovie.all
       @seen_movies = @movies.select{|m| m.seen == true}
     end
 
