@@ -26,6 +26,7 @@ class MoviesController < ApplicationController
 
   def highest_rating
     @movies = Movie.all
+    @highest_rating = @movies.where("rating > 8.5")
     @highest_rated_family = @movies.where("rating > ? AND genre = ?", 8.5, "Family")
   end
 

@@ -1,6 +1,19 @@
-<h3>Highest Rated Movies</h3>
+<h2>Highest Rated Movies</h2>
 
- <% @highest_rated_family.each do |f| %>
-  <%= f.name %>
+<div class="form">
+  <h4> All Categories </h4>
+  <div class="form-font">
+    <% @highest_rating.each do |f| %>
+     <%= f.name %>
+     <br>
+    <% end %>
+  </div>
   <br>
-<% end %>
+  <h4> Family </h4>
+  <div class="form-font">
+    <% @highest_rated_family.each do |f| %>
+    <%= f.name %>
+    <br>
+    <% end %>
+  </div>
+</div>
