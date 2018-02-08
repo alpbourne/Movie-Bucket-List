@@ -4,7 +4,7 @@
   <%= f.label :genre %>
   <%= f.text_field :genre %><br>
   <%= f.label :rating %>
-  <%= f.number_field :rating %><br>
+  <%= f.number_field :rating, step: :any %><br>
 
   <%= f.submit "Submit" %>
 <% end %>
