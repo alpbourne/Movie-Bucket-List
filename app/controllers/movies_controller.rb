@@ -30,6 +30,7 @@ class MoviesController < ApplicationController
     @highest_rated_family = @movies.where("rating > ? AND genre = ?", 8.5, "Family")
     @highest_rated_rom_com = @movies.where("rating > ? AND genre = ?", 8.5, "Rom-Com")
     @highest_rated_drama = @movies.where("rating > ? AND genre = ?", 8.5, "Drama")
+    @highest_rated_action = @movies.where("rating > ? AND genre = ?", 8.5, "Action")
   end
 
   def edit
