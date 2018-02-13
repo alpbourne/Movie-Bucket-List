@@ -2,8 +2,9 @@
 
 <div class="form">
    <% @seen.each do |f| %>
+    <% seen_movie = Movie.find_by(id: f.movie_id)%>
     <div class="form-font">
-      <%= f.movie_id %>
+      <%= seen_movie.name %>
     </div>
     <br>
   <% end %>
