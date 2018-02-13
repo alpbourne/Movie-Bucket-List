@@ -1,6 +1,10 @@
-<h2>Movies You have Seen</h2>
+<h2>Movies You Have Seen</h2>
 
- <%= @seen.each do |f| %>
-  <%= f.movie_id.name %>
-  <br>
-<% end %>
+<div class="form">
+   <% @seen.each do |f| %>
+    <div class="form-font">
+      <%= f.movie_id %>
+    </div>
+    <br>
+  <% end %>
+</div>
