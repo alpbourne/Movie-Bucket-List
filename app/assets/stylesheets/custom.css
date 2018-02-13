@@ -7,6 +7,12 @@ h4 {
   color: #7c7c7c;
 }
 
+.watched-movies-link{
+  color: #7c7c7c;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .welcome-page {
   background-image: url("../images/Popcorn.png");
   background-size: 553px 1024px;
