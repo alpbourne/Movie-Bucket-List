@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :bucket_lists
   end
   resources :movies, except: [:show]
-  resources :bucket_list_movies, except: [:show]
+  resources :bucket_list_movies
 
   get '/movies/highest_rating', to: 'movies#highest_rating', as: :highest_rating
   get '/bucket_list_movies/seen', to: 'bucket_list_movies#seen', as: :seen
