@@ -17,11 +17,6 @@ class BucketListMoviesController < ApplicationController
     end
   end
 
-  # def show
-  #   @bucket_list_movies = BucketListMovie.all
-  #   @seen = @bucket_list_movies.select{|m| m.seen == true}
-  # end
-
   def seen
     # binding.pry
     @bucket_list_movies = BucketListMovie.all
