@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$(function(){
   $("a.load_comments").on("click", function(e){
     alert("yayy!")
-    e.preventDefault()
+    e.preventDefault();
   })
 })
 
