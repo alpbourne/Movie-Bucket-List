@@ -11,12 +11,12 @@ class CommentsController < ApplicationController
 
   def create
      @comment = Comment.create(comment_params)
-     # if @comment.save
-     #   redirect_to movies_path
-     # else
-     #   flash[:alert] = "Please make sure all fields are filled out correctly"
-     #   redirect_to new_movie_path(movie.id)
-     # end
+     if @comment.save
+       redirect_to user_bucket_list_comments_path(current_user)
+     else
+       flash[:alert] = "Please make sure all fields are filled out correctly"
+       redirect_to :back
+     end
   end
 
   private
@@ -26,6 +26,6 @@ class CommentsController < ApplicationController
   end
 
   def set_bucket_list
-    @bucket_list = BucketList.find(params[:post_id])
+    @bucket_list = BucketList.find(params[:bucket_list_id])
   end
 end
