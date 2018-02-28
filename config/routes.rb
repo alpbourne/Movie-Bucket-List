@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :bucket_lists
+    resources :bucket_lists do
+      resources :comments
+    end
   end
   resources :movies, except: [:show]
   resources :bucket_list_movies, except: [:show]
