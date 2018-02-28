@@ -6,12 +6,7 @@ class CommentsController < ApplicationController
   end
 
   def new
-    if current_user
-      @comment = Comment.new
-    else
-      flash[:alert] = "Please Log In First"
-      redirect_to new_user_session_path
-    end
+    @bucket_list_movie= BucketListMovie.new(content: params[:content], bucket_list_id: params[:bucket_list_id])
   end
 
   def create
@@ -27,7 +22,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:content, :bucket_list_id)
   end
 
   def set_bucket_list

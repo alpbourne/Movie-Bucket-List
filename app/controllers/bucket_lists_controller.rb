@@ -3,10 +3,10 @@ class BucketListsController < ApplicationController
 
   def index
     @bucket_lists = current_user.bucket_lists.all
-    respond_to do |t|
-      t.html
-      t.json {render json: @bucket_lists}
-    end
+    # respond_to do |t|
+    #   t.html
+    #   t.json {render json: @bucket_lists}
+    # end
   end
 
   def new
