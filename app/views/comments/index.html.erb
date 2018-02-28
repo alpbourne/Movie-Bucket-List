@@ -1,0 +1,8 @@
+<h2>Your Comments</h2>
+
+<div class="form">
+<% @comments.each do |f| %>
+  <div class="bucket-list-form-font">
+  <%= f.content %>
+  </div>
+<% end %>
