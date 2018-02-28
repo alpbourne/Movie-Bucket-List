@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :set_post
 
   def index
-    @comments =
+    @comments = @bucket_list.find(params[:bucket_list_id])
   end
 
   def new
