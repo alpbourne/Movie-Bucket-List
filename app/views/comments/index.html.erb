@@ -1,8 +1,14 @@
 <h2>Your Comments</h2>
+<!--
+<ol>
+  <% @comments.each do |comment| %>
+  <li><%= comment.content %></li>
+  <% end %>
+</ol> -->
 
-<div class="form">
+<!-- <div class="form"> -->
 <% @comments.each do |f| %>
-  <div class="bucket-list-form-font">
+  <!-- <div class="bucket-list-form-font"> -->
   <%= f.content %>
-  </div>
+  <!-- </div> -->
 <% end %>
