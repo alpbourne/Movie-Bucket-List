@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     # render 'comments/index', :layout => false
     # render :json => @comments, :layout => false
     respond_to do |f|
-      f.html
+      f.html { render layout: false }
       f.json {render json: @comments, :layout => false}
     end
   end
