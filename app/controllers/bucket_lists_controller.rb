@@ -42,6 +42,8 @@ class BucketListsController < ApplicationController
 
    def show
      @bucket_list = BucketList.find_by(:id => params[:id])
+     @comments = @bucket_list.comments
+     @comment = Comment.new
    end
 
    def edit

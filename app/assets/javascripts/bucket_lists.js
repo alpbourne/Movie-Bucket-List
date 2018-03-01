@@ -11,6 +11,9 @@ $(function(){
     });
     e.preventDefault();
   });
+  $("#new_comment").on("submit", function(){
+    alert("You tried creating a comment")
+  })
 });
 
 
