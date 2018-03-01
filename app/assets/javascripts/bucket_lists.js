@@ -12,21 +12,23 @@ $(function(){
     e.preventDefault();
   });
   $("#new_comment").on("submit", function(e){
-    url = this.action
-    console.log(url)
+    // url = this.action
+    // console.log(url)
 
-    data = {
-      'authenticity_token': $("input[name='authenticity_token']").val(),
-      'comment': {
-        'content': $("#comment_content").val()
-      }
-    };
+    // data = {
+    //   'authenticity_token': $("input[name='authenticity_token']").val(),
+    //   'comment': {
+    //     'content': $("#comment_content").val()
+    //   }
+    // };
     $.ajax({
-      type: "POST",
-      url: url,
-      data: data,
+      type: ($("input[name='_method']").val() || this.method),
+      url: this.action,
+      data: $(this).serialize();,
       success: function(data){
-        $("div.comments").html(data)
+        $("#comment_content").val("");
+        var $ol = $("div.comments ol")
+        $ol.append(response);
       }
     });
 
