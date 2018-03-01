@@ -13,6 +13,25 @@ $(function(){
   });
   $("#new_comment").on("submit", function(e){
     alert("You tried creating a comment")
+    url = this.action
+    console.log(url)
+
+    data = {
+      'authenticity_token': $("input[name='authenticity_token']").val(),
+      'comment': {
+        'content': $("#comment_content").val()
+      }
+    };
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: data,
+      success: function(response){
+
+      }
+    });
+
+    console.log(data);
     e.preventDefault();
   });
 });
