@@ -11,9 +11,10 @@ $(function(){
     });
     e.preventDefault();
   });
-  $("#new_comment").on("submit", function(){
+  $("#new_comment").on("submit", function(e){
     alert("You tried creating a comment")
-  })
+    e.preventDefault();
+  });
 });
 
 
