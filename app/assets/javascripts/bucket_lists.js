@@ -12,25 +12,25 @@ $(function(){
     e.preventDefault();
   });
   $("#new_comment").on("submit", function(e){
-    // url = this.action
-    // console.log(url)
+    alert("You tried creating a comment")
+    url = this.action
+    console.log(url)
 
-    // data = {
-    //   'authenticity_token': $("input[name='authenticity_token']").val(),
-    //   'comment': {
-    //     'content': $("#comment_content").val()
-    //   }
-    // };
+    data = {
+      'authenticity_token': $("input[name='authenticity_token']").val(),
+      'comment': {
+        'content': $("#comment_content").val()
+      }
+    };
     $.ajax({
-      type: ($("input[name='_method']").val() || this.method),
-      url: this.action,
-      data: $(this).serialize();,
-      success: function(data){
-        $("#comment_content").val("");
+      type: "POST",
+      url: url,
+      data: data,
+      success: function(response){
         var $ol = $("div.comments ol")
         $ol.append(response);
       }
-    });
+    })
 
     console.log(data);
     e.preventDefault();
