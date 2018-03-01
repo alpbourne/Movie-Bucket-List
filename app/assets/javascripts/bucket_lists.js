@@ -12,7 +12,6 @@ $(function(){
     e.preventDefault();
   });
   $("#new_comment").on("submit", function(e){
-    alert("You tried creating a comment")
     url = this.action
     console.log(url)
 
@@ -26,8 +25,8 @@ $(function(){
       type: "POST",
       url: url,
       data: data,
-      success: function(response){
-
+      success: function(data){
+        $("div.comments").html(data)
       }
     });
 
