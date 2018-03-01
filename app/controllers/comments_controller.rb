@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def index
     @comments = @bucket_list.comments
-    render :layout => false
+    render 'comments/index', :layout => false
   end
 
   # def new
