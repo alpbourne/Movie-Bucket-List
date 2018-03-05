@@ -12,10 +12,8 @@ $(function(){
     e.preventDefault();
   });
   $("#new_comment").on("submit", function(e){
-    alert("You tried creating a comment")
     url = this.action
     console.log(url)
-
     data = {
       'authenticity_token': $("input[name='authenticity_token']").val(),
       'comment': {
@@ -38,16 +36,10 @@ $(function(){
 });
 
 
+function Comment(data) {
+  this.content = data.content
+}
 
-
-
-
-// function Movie(name, genre, rating) {
-//   this.name = name
-//   this.genre = genre
-//   this.rating = rating
-// }
-//
-// Movie.prototype.renderMovies = function(){
-//   return ''
-// }
+Comment.prototype.renderComments = function(){
+  return ''
+}
