@@ -25,6 +25,7 @@ $(function(){
       url: url,
       data: data,
       success: function(response){
+        $("comment_content").val(" ");
         var $ol = $("div.comments ol")
         $ol.append(response);
       }
@@ -41,5 +42,6 @@ function Comment(data) {
 }
 
 Comment.prototype.renderComments = function(){
-  return ''
+  return `<li>${this.content} <a data-method="delete" href="this.url"> Delete</a></li>`
 }
+// <%= link_to "Delete", user_bucket_list_comment_path(current_user, @bucket_list, comment), :method => :delete %>

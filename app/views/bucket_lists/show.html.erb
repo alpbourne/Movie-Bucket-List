@@ -15,11 +15,9 @@
 </div>
 
 <!-- <%= user_bucket_list_comments_path(current_user, :bucket_list_id => @bucket_list.id)%> -->
-  <div class="comment-form">
   <%= form_for(@comment, :url => user_bucket_list_comments_path(current_user, :bucket_list_id => @bucket_list.id)) do |f| %>
     <%= f.text_area :content %>
     <p><%= f.submit %></p>
   <% end %>
-  </div>
 
 </div>
