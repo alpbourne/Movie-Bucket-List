@@ -14,8 +14,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @bucket_list.comments.build(comment_params)
     if @comment.save
-      redirect_to user_bucket_list_path(current_user, :id => @bucket_list.id)
-      # redirect_to user_bucket_list_path(current_user, :id => @bucket_list.id)
+      render json: @comment, status: 201
     else
       render "bucket_lists/show"
     end
