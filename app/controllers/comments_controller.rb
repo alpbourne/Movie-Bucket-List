@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to user_bucket_lists_path(current_user, :id => @bucket_list.id)
+    redirect_to user_bucket_list_path(current_user, :id => @bucket_list.id)
   end
 
   # def new
