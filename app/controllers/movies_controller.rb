@@ -5,6 +5,10 @@ class MoviesController < ApplicationController
     #@movie = Movie.find(params[:movie_id])
   end
 
+  def show
+    @movie = Movie.find_by(:id => params[:id])
+  end
+
   def new
     if current_user
       @movie = Movie.new

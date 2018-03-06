@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       resources :comments
     end
   end
-  resources :movies, except: [:show]
+  resources :movies
   resources :bucket_list_movies, except: [:show]
 
   get '/movies/highest_rating', to: 'movies#highest_rating', as: :highest_rating
