@@ -34,9 +34,15 @@ $(function(){
     console.log(data);
     e.preventDefault();
   });
-  $("a.load_movie_details").on("click", function(e) {
-
-  })
+  $("a.load_details").on("click", function(e) {
+    $.ajax({
+      method: "GET",
+      url: this.href,
+    }).done(function(data){
+      $("p.card_text").html(data)
+    });
+    e.preventDefault();
+  });
 });
 
 
