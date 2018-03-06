@@ -34,6 +34,9 @@ $(function(){
     console.log(data);
     e.preventDefault();
   });
+  $("a.load_movie_details").on("click", function(e) {
+
+  })
 });
 
 
