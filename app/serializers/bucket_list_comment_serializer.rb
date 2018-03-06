@@ -1,3 +1,3 @@
 class BucketListCommentSerializer < ActiveModel::Serializer
-  attributes :content, :title
+  attributes :content
 end
