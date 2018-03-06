@@ -7,6 +7,10 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find_by(:id => params[:id])
+    respond_to do |f|
+      f.html {render layout: false }
+      f.json {render json: @movie, :layout => false}
+    end
   end
 
   def new
