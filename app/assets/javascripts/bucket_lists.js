@@ -44,4 +44,3 @@ function Comment(data) {
 Comment.prototype.renderComments = function(){
   return `<li>${this.content} <a data-method="delete" href="this.url"> Delete</a></li>`
 }
-// <%= link_to "Delete", user_bucket_list_comment_path(current_user, @bucket_list, comment), :method => :delete %>
