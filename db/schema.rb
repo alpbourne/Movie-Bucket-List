@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180228204444) do
   end
 
   create_table "comments", force: :cascade do |t|
+    t.string "title"
     t.string "content"
     t.integer "bucket_list_id"
     t.datetime "created_at", null: false
