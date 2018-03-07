@@ -34,15 +34,6 @@ $(function(){
     console.log(data);
     e.preventDefault();
   });
-  $("a.load_details").on("click", function(e) {
-    $.ajax({
-      method: "GET",
-      url: this.href,
-    }).done(function(data){
-      $("p.card_text").html(data)
-    });
-    e.preventDefault();
-  });
 });
 
 
@@ -53,3 +44,13 @@ function Comment(data) {
 Comment.prototype.renderComments = function(){
   return `<li>${this.content} <a data-method="delete" href="this.url"> Delete</a></li>`
 }
+
+// $("a.load_details").on("click", function(e) {
+//   $.ajax({
+//     method: "GET",
+//     url: this.href,
+//   }).done(function(data){
+//     $("p.card_text").html(data)
+//   });
+//   e.preventDefault();
+// });
