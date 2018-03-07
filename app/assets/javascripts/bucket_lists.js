@@ -19,9 +19,9 @@ $(function(){
     comment.done(function(response){
       $("comment_content").val(" ");
       let newComment = new Comment(response)
-      debugger
       let commentData = newComment.renderComments()
       $("div.comments").text(comment["content"]);
+      debugger
       var $ol = $("div.comments ol")
       $ol.append(commentData);
     });
