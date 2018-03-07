@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @bucket_list.comments.build(comment_params)
     if @comment.save
+      binding.pry
       render json: @comment, status: 201
     else
       render "bucket_lists/show"
