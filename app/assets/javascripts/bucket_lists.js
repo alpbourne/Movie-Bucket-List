@@ -11,39 +11,39 @@ $(function(){
     });
     e.preventDefault();
   });
-  $("#new_comment").on("submit", function(e){
-    url = this.action
-    console.log(url)
-    data = {
-      'authenticity_token': $("input[name='authenticity_token']").val(),
-      'comment': {
-        'content': $("#comment_content").val()
-      }
-    };
-    $.ajax({
-      type: "POST",
-      url: url,
-      data: data,
-      success: function(response){
-        let newComment = new Comment(response)
-        let commentData = newComment.renderComments()
-        $("comment_content").val(" ");
-        var $ol = $("div.comments ol")
-        $ol.append(commentData);
-      }
-    })
-    console.log(data);
-    e.preventDefault();
-  });
-  $("a.load_details").on("click", function(e) {
-    $.ajax({
-      method: "GET",
-      url: this.href,
-    }).done(function(data){
-      $("p.card_text").html(data)
-    });
-    e.preventDefault();
-  });
+  // $("#new_comment").on("submit", function(e){
+  //   url = this.action
+  //   console.log(url)
+  //   data = {
+  //     'authenticity_token': $("input[name='authenticity_token']").val(),
+  //     'comment': {
+  //       'content': $("#comment_content").val()
+  //     }
+  //   };
+  //   $.ajax({
+  //     type: "POST",
+  //     url: url,
+  //     data: data,
+  //     success: function(response){
+  //       let newComment = new Comment(response)
+  //       let commentData = newComment.renderComments()
+  //       $("comment_content").val(" ");
+  //       var $ol = $("div.comments ol")
+  //       $ol.append(commentData);
+  //     }
+  //   })
+    // console.log(data);
+    // e.preventDefault();
+  // });
+  // $("a.load_details").on("click", function(e) {
+  //   $.ajax({
+  //     method: "GET",
+  //     url: this.href,
+  //   }).done(function(data){
+  //     $("p.card_text").html(data)
+  //   });
+  //   e.preventDefault();
+  // });
 });
 
 
