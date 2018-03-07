@@ -11,7 +11,21 @@ $(function(){
     });
     e.preventDefault();
   });
-  // $("#new_comment").on("submit", function(e){
+  $("#new_comment").on("submit", function(e){
+    e.preventDefault();
+    var values = $(this).serialize();
+    var comment = $.post(this.action, values);
+
+    comment.done(function(response){
+      $("comment_content").val(" ");
+      let newComment = new Comment(response)
+      debugger
+      let commentData = newComment.renderComments()
+      $("div.comments").text(comment["content"]);
+      var $ol = $("div.comments ol")
+      $ol.append(commentData);
+    });
+  });
   //   url = this.action
   //   console.log(url)
   //   data = {
