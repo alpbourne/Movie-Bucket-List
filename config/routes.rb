@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   end
   resources :movies
   resources :bucket_list_movies, except: [:show]
+  resources :comments, only: [:destroy]
 
   get '/movies/highest_rating', to: 'movies#highest_rating', as: :highest_rating
   get '/bucket_list_movies/seen', to: 'bucket_list_movies#seen', as: :seen

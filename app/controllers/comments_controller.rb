@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to user_bucket_list_path(current_user, :id => @bucket_list.id)
+    redirect_to user_bucket_list_path(current_user, :id => @comment.bucket_list.id)
   end
 
   # def new
@@ -49,6 +49,6 @@ class CommentsController < ApplicationController
   end
 
   def set_bucket_list
-    @bucket_list = BucketList.find(params[:bucket_list_id])
+    @bucket_list = BucketList.find(params[:bucket_list_id]) if params[:bucket_list_id]
   end
 end

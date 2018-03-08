@@ -17,7 +17,7 @@ $(function(){
     var comment = $.post(this.action, values);
 
     comment.done(function(response){
-      $("comment_content").val(" ");
+      $("#comment_content").val(" ");
       let newComment = new Comment(response)
       let commentData = newComment.renderComments()
       $("div.comments").text(comment["content"]);
@@ -62,9 +62,10 @@ $(function(){
 
 
 function Comment(data) {
+  this.id = data.id
   this.content = data.content
 }
 
 Comment.prototype.renderComments = function(){
-  return `<li>${this.content} <a data-method="delete" href="this.url"> Delete</a></li>`
+  return `<li>${this.content} <a data-method="delete" href="/comments/${this.id}"> Delete</a></li>`
 }
