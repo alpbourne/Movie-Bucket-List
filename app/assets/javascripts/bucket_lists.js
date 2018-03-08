@@ -21,7 +21,7 @@ $(function(){
       let newComment = new Comment(response)
       let commentData = newComment.renderComments()
       $("div.comments").text(comment["content"]);
-      debugger
+      // debugger
       var $ol = $("div.comments ol")
       $ol.append(commentData);
     });
