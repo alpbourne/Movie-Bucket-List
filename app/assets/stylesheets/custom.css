@@ -18,11 +18,16 @@ h4 {
   font-size: 18px;
 }
 
+body, html {
+    height: 100%;
+}
+
 .welcome-page {
-  background-image: url("../images/Popcorn.png");
-  background-size: 553px 1024px;
+  background-image: url("Popcorn.png");
   height: 100%;
-  width: 100%
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header-links {
