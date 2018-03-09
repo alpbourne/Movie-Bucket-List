@@ -145,3 +145,26 @@
         <%= link_to "sign in",  new_user_session_path  %>
         <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
       <% end %> -->
+      <!-- //   url = this.action
+      //   console.log(url)
+      //   data = {
+      //     'authenticity_token': $("input[name='authenticity_token']").val(),
+      //     'comment': {
+      //       'content': $("#comment_content").val()
+      //     }
+      //   };
+      //   $.ajax({
+      //     type: "POST",
+      //     url: url,
+      //     data: data,
+      //     success: function(response){
+      //       let newComment = new Comment(response)
+      //       let commentData = newComment.renderComments()
+      //       $("comment_content").val(" ");
+      //       var $ol = $("div.comments ol")
+      //       $ol.append(commentData);
+      //     }
+      //   })
+        // console.log(data);
+        // e.preventDefault();
+      // }); -->
