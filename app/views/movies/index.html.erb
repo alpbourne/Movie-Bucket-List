@@ -6,9 +6,8 @@
   <div class="card-body">
     <% @movies.each do |movie| %>
     <h5 class="card-title"><%=movie.name%></h5>
-      <p class="card-text"><%= link_to "Details", movie_path(movie.id), :class => "load_details" %></p>
-      <div class="details">
-
+      <p class="card-text"><%= link_to "Details", movie_path(movie.id), :class => "load_details", :id => movie.id %></p>
+      <div class="details-<%= movie.id %>">
       </div>
       <!-- <p class="card-text"><%=movie.genre%> | <%=movie.rating%> | <%= link_to "Edit", edit_movie_path(:id => movie.id)%></p> -->
       <%=form_tag(new_bucket_list_movie_path(movie_id: movie.id), method: "get") do %>

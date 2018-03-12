@@ -27,11 +27,12 @@ $(function(){
     });
   });
   $("a.load_details").on("click", function(e) {
+    debugger
     $.ajax({
       method: "GET",
       url: this.href,
     }).done(function(data){
-      $("div.details").html(data)
+      $(`div.details-${e.target.id}`).html(data)
     });
     e.preventDefault();
   });
