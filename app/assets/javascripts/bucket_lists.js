@@ -1,8 +1,5 @@
 $(function(){
   $("a.load_comments").on("click", function(e){
-  //   alert("yayy!")
-  //   e.preventDefault();
-  // })
     $.ajax({
       method: "GET",
       url: this.href,

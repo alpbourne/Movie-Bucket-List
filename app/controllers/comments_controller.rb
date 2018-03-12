@@ -3,8 +3,6 @@ class CommentsController < ApplicationController
 
   def index
     @comments = @bucket_list.comments
-    # render 'comments/index', :layout => false
-    # render :json => @comments, :layout => false
     respond_to do |f|
       f.html { render layout: false }
       f.json {render json: @comments, :layout => false}
