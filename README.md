@@ -17,4 +17,4 @@ Bug reports and pull requests are welcome on GitHub at this project's repository
 
 ## License
 
-This Web Application is available as open source under the terms of the MIT License.
+This Web Application is available as open source under the terms of the MIT License.(https://opensource.org/licenses/MIT)
