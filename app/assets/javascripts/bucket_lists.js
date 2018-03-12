@@ -21,13 +21,11 @@ $(function(){
       let newComment = new Comment(response)
       let commentData = newComment.renderComments()
       $("div.comments").text(comment["content"]);
-      // debugger
       var $ol = $("div.comments ol")
       $ol.append(commentData);
     });
   });
   $("a.load_details").on("click", function(e) {
-    debugger
     $.ajax({
       method: "GET",
       url: this.href,
