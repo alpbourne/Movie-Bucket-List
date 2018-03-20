@@ -2,9 +2,17 @@ $(function(){
   $("a.load_comments").on("click", function(e){
     $.ajax({
       method: "GET",
-      url: this.href,
+      url: `${this.href}.json`,
     }).done(function(data){
-      $("div.comments").html(data)
+      data.forEach(function(e){
+        let newComment = new Comment(e)
+        let commentData = newComment.renderComments()
+        var $ol = $("div.comments ol")
+        $ol.append(commentData);
+      })
+      // serializeData= $(data).serialize();
+      // console.log(data)
+      // $("div.comments").html(serializeData)
     });
     e.preventDefault();
   });
