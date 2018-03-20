@@ -1,6 +1,0 @@
-<ol>
-  <% @comments.each do |comment| %>
-  <li><%= comment.content %></li>
-  <%= link_to "Delete", user_bucket_list_comment_path(current_user, @bucket_list, comment), :method => :delete %>
-  <% end %>
-</ol>
