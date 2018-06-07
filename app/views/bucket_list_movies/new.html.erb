@@ -1,8 +1,10 @@
 <h2>Add Movie to Bucket List form</h2>
 
-<%= form_for @bucket_list_movie do |f| %>
-  <h4> Which Bucket List would you like to add this to?</h4>
-  <%= f.collection_select :bucket_list_id, current_user.bucket_lists.all, :id, :name, include_blank: "" %><br>
-  <%= hidden_field_tag :movie_id, @movie_id %>
-  <%= f.submit "Add Movie to Bucket List" %>
-<% end %>
+<div class="form">
+  <%= form_for @bucket_list_movie do |f| %>
+    <h4> Which Bucket List would you like to add this to?</h4>
+    <%= f.collection_select :bucket_list_id, current_user.bucket_lists.all, :id, :name, include_blank: "" %><br>
+    <%= hidden_field_tag :movie_id, @movie_id %>
+    <%= f.submit "Add Movie to Bucket List" %>
+  <% end %>
+</div>
