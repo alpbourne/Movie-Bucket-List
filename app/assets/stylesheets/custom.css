@@ -44,6 +44,7 @@ body, html {
 
 .header-links a:link{
   color: #FFFFFF;
+  margin-left: 10px;
 }
 
 .card-title {
