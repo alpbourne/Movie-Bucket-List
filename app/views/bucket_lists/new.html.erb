@@ -1,9 +1,9 @@
 <h2>New Bucket List Form</h2>
-
+<br>
 <div class="form">
   <%= form_for ([current_user, @bucket_list])do |f| %>
     <%= render 'bucket_lists/form', f: f %>
-    <br>
+    <br><br>
 
     <h4> Create New Movie to Add:</h4>
     <%= f.fields_for(:movies) do |m| %>
@@ -14,7 +14,7 @@
       <%= m.label :rating %>
       <%= m.number_field :rating %><br>
     <% end %>
-
+    <br>
     <%= f.submit "Create",  class:"btn btn-primary" %>
     <% end %>
 </div>

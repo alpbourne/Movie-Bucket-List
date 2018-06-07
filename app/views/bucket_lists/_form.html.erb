@@ -1,6 +1,5 @@
 <h4> <%= f.label :name %>
   <%= f.text_field :name %>
 </h4>
-
   <h4> Select Movies to Add:</h4>
   <%= f.collection_check_boxes :movie_ids, @movies, :id, :name %>
