@@ -123,3 +123,7 @@ body, html {
 .comment-form {
   /* margin-left: 10px; */
 }
+
+.header {
+  margin-left: 10px;
+}
