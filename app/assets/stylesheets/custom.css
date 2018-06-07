@@ -100,7 +100,8 @@ body, html {
 
 .field_with_errors {
   color: #f23C3C;
-  background-color: #3B3E3F
+  background-color: #3B3E3F;
+  margin-left: 10px;
 }
 
 .bucket-list-form-font {
