@@ -20,7 +20,7 @@
 <!-- <%= user_bucket_list_comments_path(current_user, :bucket_list_id => @bucket_list.id)%> -->
   <%= form_for(@comment, :url => user_bucket_list_comments_path(current_user, :bucket_list_id => @bucket_list.id)) do |f| %>
     <%= f.text_area :content %>
-    <p><%= f.submit %></p>
+    <p><%= f.submit "Create Comment",  class:"btn btn-primary"%></p>
   <% end %>
 
 </div>
