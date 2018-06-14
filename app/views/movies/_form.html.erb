@@ -1,10 +1,12 @@
-<%= form_for(@movie) do |f|%>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :genre %>
-  <%= f.text_field :genre %><br>
-  <%= f.label :rating %>
-  <%= f.number_field :rating, step: :any %><br><br>
+<div class="form">
+  <%= form_for(@movie) do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %><br>
+    <%= f.label :rating %>
+    <%= f.number_field :rating, step: :any %><br><br>
 
-  <%= f.submit "Create",  class:"btn btn-primary" %>
-<% end %>
+    <%= f.submit "Create",  class:"btn btn-primary" %>
+  <% end %>
+</div>
