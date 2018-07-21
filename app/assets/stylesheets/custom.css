@@ -44,16 +44,24 @@ body, html {
   background-size: cover;
 }
 
+nav {
+  background-color: #3B3E3F;
+}
 .header-links {
   height: 42px;
   width: 100%;
-  background-color: #3B3E3F;
+  /* background-color: #3B3E3F; */
   color: #FFFFFF
 }
 
-.header-links a:link{
-  color: #FFFFFF;
+.header-links a {
+  color: #39C69E;;
   margin-left: 10px;
+}
+
+.header-links a:hover {
+  color: #aaf7e0;
+  text-decoration: none;
 }
 
 .card-title {
