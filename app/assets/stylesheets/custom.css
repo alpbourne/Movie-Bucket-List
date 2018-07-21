@@ -44,25 +44,26 @@ body, html {
   background-size: cover;
 }
 
-nav {
-  background-color: #3B3E3F;
+.navbar {
+  margin-bottom: 0px;
 }
-.header-links {
+
+/* .header-links {
   height: 42px;
   width: 100%;
-  /* background-color: #3B3E3F; */
-  color: #FFFFFF
-}
+  background-color: #3B3E3F;
+  color: #FFFFFF;
+} */
 
-.header-links a {
+/* .header-links a {
   color: #39C69E;;
   margin-left: 10px;
-}
+} */
 
-.header-links a:hover {
+/* .header-links a:hover {
   color: #aaf7e0;
   text-decoration: none;
-}
+} */
 
 .card-title {
   	height: 24px;
@@ -117,8 +118,9 @@ nav {
 
 .field_with_errors {
   color: #f23C3C;
-  background-color: #3B3E3F;
+  background-color: #222222;
   padding-left: 10px;
+  border-radius: 4px;
 }
 
 .bucket-list-form-font {
